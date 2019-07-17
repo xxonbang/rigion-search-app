@@ -14,7 +14,5 @@ export default {
 </script>
 
 <style>
-  .selector-for-some-widget {
-    box-sizing: content-box;
-  }
+
 </style>

@@ -39,17 +39,17 @@
                 </select>
               </label>
               <label style="padding-right: 5px;">
-                <select id="sidoCd" class="form-control">
+                <select id="sggCd" class="form-control">
                   <option value="*">시/군/구</option>
                 </select>
               </label>
               <label style="padding-right: 5px;">
-                <select id="sidoCd" class="form-control">
+                <select id="umdCd" class="form-control">
                   <option value="*">읍/면/동</option>
                 </select>
               </label>
               <label style="padding-right: 5px;">
-                <select id="sidoCd" class="form-control">
+                <select id="riCd" class="form-control">
                   <option value="*">리</option>
                 </select>
               </label>
@@ -59,16 +59,20 @@
         </tbody>
       </table>
     </div>
-    <br><br>
+    <div class="float-md-right" style="width: 90px;">
+      <button type="button" class="btn btn-block btn-md btn-secondary">검색</button>
+    </div>
+    <br><br><br>
     <div>
-      <b-table id="code-table" class="table-bordered" striped hover :items="items" :per-page="perPage" :current-page="currentPage"></b-table>
+      <b-table id="code-table" class="table-bordered" striped hover :items="items" :per-page="perPage"
+               :current-page="currentPage"></b-table>
     </div>
     <div class="overflow-auto" align="center">
       <b-pagination
         v-model="currentPage"
         :total-rows="rows"
         :per-page="perPage"
-        aria-controls="my-table"
+        aria-controls="result-table"
         align="center"
       ></b-pagination>
       <p class="mt-3">Current Page: {{ currentPage }}</p>
@@ -114,8 +118,8 @@
   table {
     /*width: 100%;*/
     /*margin: auto;*/
-    text-align: center;
-    padding: 10px 8px;
-    /*vertical-align: center;*/
+    text-align: center !important;
+    /*vertical-align: middle !important;*/
+    /*width: 100%;*/
   }
 </style>
